@@ -4,10 +4,10 @@ Description: Command basic of Git on the Terminal.
  Configuring git 
  ----
 ### User Namer
-$ git config --global user.name "Luan Orlando"
+$ git config --global user.name "`User name`"
 
 ### Email
-$ git config --global user.email "orlandoluan@hotmail.com"
+$ git config --global user.email "`your_email@example.com`"
 
 ### Editor
 $ git config --global core.editor "`Pass name of editor`"
@@ -113,6 +113,63 @@ $ git commit -m "`message`"
 $ git reset --hard `rash of a previous commit than you wish to delete`
 //Reseted all
 
+Generating a new SSH key
+---
+
+### Add your email
+$ ssh-keygen -t rsa -b 4096 -C "`your_email@example.com`"
+
+```sh
+Generating public/private rsa key pair.
+Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter] <- 
+Enter passphrase (empty for no passphrase): [Type a passphrase] <- Press enter
+Enter same passphrase again: [Type passphrase again] <- Press enter
+```
+### Getting ssh key
+$ cd ~/.ssh/
+$ ls
+$ cat id_rsa.pub or $ more id_rsa.pub
+
+## Adding SSH Key
+ - Open your Github, clicked in your profile image and choose "Settings".
+ - In "Personal Settings" choose "SSH and GPG Keys".
+ - Click in "New SSH key".
+ - Add Title.
+ - Pass your key in the field "Key".
+ exemplo:
+ ```sh
+ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC0lvgtrJBocUGezaLsmKyNS3fF1a8WQrOQwtvuTlhDIsyR3IE1WZNK44M27qKZ5IWO2xAf03pHGtkMcKOimCpoGxkjhStX1owo4b8eWDDRiYrioJm6HD6UAd3OfDQo2IDVwr2c3jU4x/lhMU1vq5TvN/f4IDFhBa30ldurIF9h8/2KMlHW+AqNZm8BQyHw470U551DaggZa23EROQmQDYmvJHYFV3urG4o7NAO309M43j4jLfoShbGDW/YrWuEzvpCzPXp+D63dJ96wHSq3tskEUBKS3a+gTs365Ni6Ui8WelVaTIpokTJELWVRuLd6pX8qawU8PmIKwze3UsUpjuvGBkpvPRq6ORZQ7sydGqtSXZjFYAx68vG158drgdYfM4enE8i/2TKC0ulHBzKH0MzHz+EXvHoNifT7Q8GYJkRydeEaDIZ65iv2edlb5K41c18N2eOFGkEpQdpo1RPYUanZLC1o22vXHGuIUaeMEbyBldmjJCbat4Ttbyql8ebzin9f3k1in2vdmbgSh1E13Vpttn4kRgur3SEjZsVWSPSKIHvpvQfeeqAMtFFtGvFQ== orlandoluan@hotmail.com
+ ```
+
+ Creating a new repository
+---
+ - Open your github page.
+ - Click in "New Repository".
+ - Enter the name of your repository.
+ - Enter with description of your repository.
+ - Choose "Public" or "Private".
+  ```sh
+  Public - Visible to all
+  Private - Only you and your guests
+  ```
+  -  Click in "Create repository".
+  
+ Adding files to the repository
+  ---
+  ### Pointing the origin
+ $ git remote add origin https://github.com/luanorlando/git-course-.git `<- This url, you will find in the page of your repository`
+ 
+ ### Show repositorys registered
+ $ git remote
+ 
+ ### For more details
+ $ git remote -v
+ 
+ ### Send to the repository
+ $ git push -u origin master
+ 
+ 
+ 
 
 `loojhgjhfg`
 
@@ -136,7 +193,6 @@ IdiomaController
 LoginController
 TemplateController
 ```
-
-
-
-`
+Git Hub
+---
+[Luan orlando](https://github.com/luanorlando)
