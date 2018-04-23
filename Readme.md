@@ -168,31 +168,73 @@ $ cat id_rsa.pub or $ more id_rsa.pub
  ### Send to the repository
  $ git push -u origin master
  
- 
- 
-
-`loojhgjhfg`
-
-jjghjgkjgk
+ Clone a repository
 ---
+### Command Clone
+$ git clone git@github.com:luanorlando/git-course-.git //Enter with a new name `<- address SSH`
+$ git clone https://github.com/luanorlando/git-course-.git `<- address HTTPS`
 
-[hjgjkgjhgjk](http://hgjgjgj)
-
-- jjkhkh
-1. ohkhhi
-
-* jghgghj
-
-```sh
-APIController
-AreaInteresseController
-WebServiceController
-DisponibilidadeController
-HomeController
-IdiomaController
-LoginController
-TemplateController
+Fork
+---
+ - Choose a repository
+ - In the page this repository, click in fork
+ 
+Branch
+ ---
+ ### Creating a new branch
+ $ git checkout -b  `branch name`
+ 
+ ### Show exiting branch and current branch
+ $ git branch
+ 
+ ### Choosing branch
+ $ git checkout `'branch name'`
+ 
+ ### Delete branch
+ $ git branch -D `branch name`
+  
+Merge
+---
+```sn
+ - if you create a new branch and add a file, you can do a merge 
 ```
+$ git merge `name of other branch`
+$ git commit -m "`message`"
+
+Rebase
+---
+$ git rebase `name of other branch`
+
+Git Ignore
+---
+### Ignore all Extension
+*.`extension name`
+
+### ignore only file
+`File name`
+
+Creating shortcut
+---
+- Ex: git status
+$ git config --global alias.`shortcut name` status
+- Now you don't need write git status, only git `shortcut name` <- I will use only the letter `S`
+
+Making their versions with tag
+---
+### Add tag
+$ git tag -a 1.0.0 -m "`Write your message`"
+$ git push origin master --tags
+
+### Delete Tag
+$ git tag -d `pass the tag`
+$ git push origin : `pass the tag`
+
+Revert
+---
+$ git revert `rash of commit`
+$ git show `rash of commit` 
+
+ 
 Git Hub
 ---
 [Luan orlando](https://github.com/luanorlando)
